@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Theme change</title>
+
+    <style>
+        .dark {
+            background: #000000;
+            color: #f8f3f3;
+        }
+
+        body {
+
+            padding-top: 80px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h2>Theme change</h2>
+
+    <label>
+        <input type="checkbox" id="toggle"> Dark Mode
+    </label>
+
+    <script>
+        toggle.onchange = () => document.body.classList.toggle("dark");
+    </script>
+
+</body>
+
+</html>
