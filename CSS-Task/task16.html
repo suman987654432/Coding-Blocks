@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Property</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: cursive;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 100px 1fr 1fr;
+            grid-template-rows: 50px 1fr 1fr 100px;
+            gap: 10px;
+            grid-template-areas:
+                "sidebar search profile"
+                "sidebar msg msg"
+                "sidebar cardsA cardsA"
+                "sidebar cardB cardC"
+                "footer footer footer";
+            height: 100vh;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background: #e94e4e;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .search {
+            grid-area: search;
+            background: #dfd36c;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .profile {
+            grid-area: profile;
+            background: #3b8aeb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .setting {
+            background: #e058b0;
+
+        }
+
+        .msg {
+            grid-area: msg;
+            background-color: #5ca40a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cardsA {
+            grid-area: cardsA;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            padding: 10px;
+            align-items: center;
+        }
+
+        .cardsA>div {
+            background: #f1ba08;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cardB {
+            grid-area: cardB;
+            background: #6d69ba;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cardC {
+            grid-area: cardC;
+            padding: 10px;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .cardC>div {
+            background: #ed430f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card1,
+        .card2,
+        .card3,
+        .card4,
+        .card5,
+        .card6 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: #0ebf26;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <p>Item 1</p>
+            <p>Item 2</p>
+            <p>Item 3</p>
+            <p>Item 4</p>
+            <div class="setting">
+                <p>Settings</p>
+                <p>Help</p>
+            </div>
+        </div>
+        <div class="search">Search</div>
+        <div class="profile">Profile</div>
+
+        <div class="msg">Type message</div>
+
+        <div class="cardsA">
+            <div class="card1">Card 1</div>
+            <div class="card2">Card 2</div>
+            <div class="card3">Card 3</div>
+        </div>
+
+        <div class="cardB">
+            <div class="card4">Card 4</div>
+        </div>
+        <div class="cardC">
+            <div class="card5">Card 5</div>
+            <div class="card6">Card 6</div>
+        </div>
+
+
+        <div class="footer">Footer</div>
+    </div>
+</body>
+
+</html>

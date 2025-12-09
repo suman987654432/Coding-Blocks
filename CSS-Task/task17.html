@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <style>
+        body {
+            margin: 0;
+            font-family: cursive;
+        }
+
+        .container {
+            display: grid;
+            grid-template-rows: 70px 1fr 70px;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-areas:
+                "header header header"
+                "left main right"
+                "footer footer footer";
+            gap: 10px;
+            height: 100vh;
+        }
+
+        .header {
+            grid-area: header;
+            background-color: rgb(183, 145, 90);
+            padding: 15px;
+        }
+
+        .left {
+            grid-area: left;
+            background-color: rgb(183, 145, 90);
+            padding: 15px;
+        }
+
+        .main {
+            grid-area: main;
+            background-color: rgb(183, 145, 90);
+            padding: 15px;
+        }
+
+        .right {
+            grid-area: right;
+            background-color: rgb(183, 145, 90);
+            padding: 15px;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: rgb(183, 145, 90);
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="left">Left</div>
+        <div class="main">Main</div>
+        <div class="right">Right</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+
+</html>
