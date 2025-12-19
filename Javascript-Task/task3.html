@@ -48,21 +48,21 @@
         const select = document.getElementById("price");
         const output = document.getElementById("output");
         let isMonthly = true;
-let value = true;
+        let value = true;
 
-function toggleChange() {
-  let planName = select.options[select.selectedIndex].text;
-  let price = select.value;
+        function toggleChange() {
+            let planName = select.options[select.selectedIndex].text;
+            let price = select.value;
 
-  if (value) {
-    output.innerText = planName + " - ₹" + price;
-  } else {
+            if (value) {
+                output.innerText = planName + " - ₹" + price;
+            } else {
 
-    output.innerText = planName + " - ₹" + price + "9";
-  }
+                output.innerText = planName + " - ₹" + price + "9";
+            }
 
-  
-}
+
+        }
 
     </script>
 </body>
