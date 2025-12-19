@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pricing Toggle</title>
+
+    <style>
+        .card {
+            width: 400px;
+            height: 350px;
+            background-color: #d2ddef;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+
+        .output {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+
+        <div class="output" id="output">
+            Select a plan
+        </div>
+
+        <select id="price">
+            <option value="999">Basic</option>
+            <option value="1499">Pro</option>
+            <option value="2999">Premium</option>
+        </select>
+
+        <br><br>
+
+        <button onclick="toggleChange()">Toggle Monthly / Yearly</button>
+    </div>
+
+    <script>
+        const select = document.getElementById("price");
+        const output = document.getElementById("output");
+        let isMonthly = true;
+let value = true;
+
+function toggleChange() {
+  let planName = select.options[select.selectedIndex].text;
+  let price = select.value;
+
+  if (value) {
+    output.innerText = planName + " - ₹" + price;
+  } else {
+
+    output.innerText = planName + " - ₹" + price + "9";
+  }
+
+  
+}
+
+    </script>
+</body>
+
+</html>

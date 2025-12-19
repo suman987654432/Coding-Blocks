@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Password Strength</title>
+
+  <style>
+    #strength {
+      margin-top: 8px;
+      width: 100px;
+      height: 10px;
+      border-radius: 5px;
+      background: #eee;
+      color: transparent;
+    
+    }
+    #strengthLabel {
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 4px;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <input type="password" id="passwordInput" placeholder="Enter Password">
+  <div id="strength"></div>
+  <span id="strengthLabel"></span>
+  <script>
+    const input = document.getElementById('passwordInput');
+    const strength = document.getElementById('strength');
+    const strengthLabel = document.getElementById('strengthLabel');
+
+
+    
+    input.addEventListener('input', function () {
+      const val = input.value;
+      if (val.length <= 4) {
+        strength.style.background = "red";
+        
+        strengthLabel.style.color = "red";
+      } 
+      else if (val.length <= 8) {
+        strength.style.background = "orange";
+      
+        strengthLabel.style.color = "orange";
+      } 
+      else {
+        strength.style.background = "green";
+        
+        strengthLabel.style.color = "green";
+      }
+    });
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Live Profile</title>
+
+  <style>
+    .inputbox {
+      border: 1px solid #000;
+      padding: 20px;
+      width: 300px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      background: #f8f8f8;
+    }
+    .inputbox input[type="text"] {
+      width: 90%;
+      padding: 7px;
+      margin-bottom: 12px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+   
+    }
+    .showbox {
+      border: 1px solid #000;
+      padding: 20px;
+      width: 300px;
+      margin-top: 20px;
+      border-radius: 8px;
+      background: #e9f0fa;
+      box-shadow: 0 2px 8px #0001;
+    
+    }
+    .showbox #showRole {
+      color: #1976d2;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="inputbox">
+    <input type="text" id="nameInput" placeholder="Name">
+    <br>
+    <input type="text" id="roleInput" placeholder="Role">
+    <br>
+    <input type="text" id="bioInput" placeholder="Bio">
+    <br>
+    <input type="color" id="colorInput">
+  </div>
+
+  <div class="showbox">
+    <h2 id="showName"></h2>
+    <h4 id="showRole"></h4>
+    <p id="showBio"></p>
+  </div>
+
+  
+  <script>
+    const nameInput = document.getElementById("nameInput");
+    const roleInput = document.getElementById("roleInput");
+    const bioInput = document.getElementById("bioInput");
+    const colorInput = document.getElementById("colorInput");
+    const showName = document.getElementById("showName");
+    const showRole = document.getElementById("showRole");
+    const showBio = document.getElementById("showBio");
+    const showbox = document.querySelector('.showbox');
+
+    nameInput.addEventListener("input", function () {
+      showName.innerText = nameInput.value;
+    });
+
+    roleInput.addEventListener("input", function () {
+      showRole.innerText = roleInput.value;
+    });
+
+    bioInput.addEventListener("input", function () {
+      showBio.innerText = bioInput.value;
+    });
+
+    colorInput.addEventListener("input", function () {
+      showbox.style.borderTop = "6px solid " + colorInput.value;
+    });
+  </script>
+
+</body>
+</html>
